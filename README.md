@@ -126,7 +126,7 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 🧪 Escenario de Prueba (BDD - Gherkin)
 
 
-Feature: Gestión de reservas de canchas
+# Feature: Gestión de reservas de canchas
 
   Scenario: Realizar una reserva en un horario disponible
     Given una cancha con horario disponible a las 10:00
