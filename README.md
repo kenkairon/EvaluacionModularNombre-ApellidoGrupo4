@@ -75,7 +75,7 @@ Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mant
 ### ✅ 4. ISP - Interface Segregation Principle  
 > No se obliga a implementar métodos innecesarios.
 
-![ISP](assets/i.png)  
+![ISP](assets/l.png)  
 🧠 Se cumple al definir interfaces específicas como `RepositorioReserva`.
 
 ---
@@ -105,27 +105,27 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 > Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.
 
 ```bash
-mvn clean verify
+    mvn clean verify
 
-## ✅ Actividad 5: ATDD y criterios de aceptación (BDD)
+---
+ ✅ Actividad 5: ATDD y Criterios de Aceptación (BDD)
 
-### 📝 Historia de Usuario (modelo INVEST)
+📝 Historia de Usuario (modelo INVEST)
 
 **Como** usuario del sistema,  
 **quiero** reservar una cancha en un horario específico,  
 **para** asegurarme de que tendré acceso a la cancha cuando lo necesite.
 
 ---
+ ✅ Criterios de Aceptación
 
-### ✅ Criterios de Aceptación
-
-1. La reserva solo es válida si el horario está disponible.
-2. Se debe lanzar un error si se intenta reservar un horario ocupado.
+1. La reserva solo es válida si el horario está disponible.  
+2. Se debe lanzar un error si se intenta reservar un horario ocupado.  
 3. Se debe poder contar la cantidad de reservas por día.
 
 ---
 
-### 🧪 Escenario de Prueba (BDD - Gherkin)
+🧪 Escenario de Prueba (BDD - Gherkin)
 
 ```gherkin
 Feature: Gestión de reservas de canchas
@@ -140,44 +140,3 @@ Feature: Gestión de reservas de canchas
     When otro usuario intenta reservar el mismo horario
     Then se debe lanzar una excepción indicando que el horario está ocupado
 ---
-
-✅ Actividad 6: Comparación JUnit vs TestNG
-📊 Tabla Comparativa
-Característica	JUnit 5	TestNG
-Anotaciones	@Test, @BeforeEach	@Test, @BeforeMethod
-Parametrización	@ParameterizedTest	Muy flexible con @DataProvider
-Integración	Muy usado con Maven/Gradle	También tiene buena integración
-Reportes	Básicos (mejorables con plugins)	Mejores reportes por defecto
-Flexibilidad	Más simple, limpio y moderno	Más configurable (prioridades, grupos)
-Popularidad	Muy popular en proyectos actuales	Usado en proyectos más antiguos
-
-
-## ⚙️ Tecnologías Usadas
-
-| Tecnología | Descripción |
-|------------|-------------|
-| Java 17 | Lenguaje principal |
-| JUnit 5 | Framework de pruebas unitarias |
-| Mockito | Librería para mocks en pruebas |
-| JaCoCo | Herramienta de cobertura de código |
-| Maven | Gestor de dependencias y build |
-
----
-
-## 🚀 Cómo Ejecutar el Proyecto
-
-1. **Clonar el repositorio:**
-
-   ```bash
-   git clone https://github.com/tuusuario/modulo-reservas.git
-   cd modulo-reservas
-
-
-2. Compila y ejecuta las pruebas con cobertura:
-    ```bash    
-    mvn clean verify
-
-3. Windows:
-    ```bash  
-    open target/site/jacoco/index.html
-
