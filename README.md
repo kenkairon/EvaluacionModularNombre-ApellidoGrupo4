@@ -23,7 +23,7 @@ Desarrollado como práctica de TDD y principios de ingeniería de software profe
 
 ---
 
-## 🔁 Ciclo TDD
+## 🔁 ✅ Actividad 1: Ciclo TDD 
 
 ### 🔴 Prueba Red
 
@@ -46,15 +46,7 @@ Desarrollado como práctica de TDD y principios de ingeniería de software profe
 
 ---
 
-## 📊 Cobertura de Código (JaCoCo)
-
-> Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.
-
-![Reporte JaCoCo](assets/jacoco.png)
-
----
-
-## 🧠 Diseño SOLID
+## 🧠 ✅ Actividad 2: Principios SOLID
 
 Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mantenible:
 
@@ -76,15 +68,15 @@ Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mant
 > Las clases hijas pueden sustituir a sus padres sin alterar el comportamiento esperado.
 
 ![LSP](assets/l.png)  
-🧠 Cumple LSP porque puedes reemplazar cualquier implementación sin que el sistema falle.
+🧠 Se cumple porque podemos reemplazar el repositorio real con un mock sin afectar el flujo.
 
 ---
 
 ### ✅ 4. ISP - Interface Segregation Principle  
 > No se obliga a implementar métodos innecesarios.
 
-![ISP](assets/l.png)  
-🧠 Cumple ISP porque solo expone lo necesario para las reservas, sin métodos como `eliminarTodo()` o `reset()`.
+![ISP](assets/i.png)  
+🧠 Se cumple al definir interfaces específicas como `RepositorioReserva`.
 
 ---
 
@@ -92,19 +84,73 @@ Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mant
 > Se depende de abstracciones, no de implementaciones concretas.
 
 ![DIP](assets/d.png)  
-🧠 Cumple DIP porque `GestorReservas` depende de una interfaz (abstracción), lo que facilita la prueba con Mockito.
+🧠 Se cumple porque `GestorReservas` depende de `RepositorioReserva`, facilitando el uso de mocks.
 
 ---
 
-## 🧪 Pruebas con Mockito
+## 🧪 ✅ Actividad 3: Pruebas con Mockito
 
 > Se usa Mockito para simular dependencias y probar unidades de forma aislada.
 
-![Uso de Mockito](assets/mock.png)  
-📌 **Declaración y uso en test:**
+![Uso de Mockito](assets/mock.png)
 
+📌 **Ejemplo:**  
+Se simula el repositorio para verificar que el sistema no guarde una reserva si el horario está ocupado.  
+También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` para validar excepciones.
 
 ---
+
+## 📊 ✅ Actividad 4: Cobertura de Código (JaCoCo)
+
+> Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.
+
+```bash
+mvn clean verify
+
+## ✅ Actividad 5: ATDD y criterios de aceptación (BDD)
+
+### 📝 Historia de Usuario (modelo INVEST)
+
+**Como** usuario del sistema,  
+**quiero** reservar una cancha en un horario específico,  
+**para** asegurarme de que tendré acceso a la cancha cuando lo necesite.
+
+---
+
+### ✅ Criterios de Aceptación
+
+1. La reserva solo es válida si el horario está disponible.
+2. Se debe lanzar un error si se intenta reservar un horario ocupado.
+3. Se debe poder contar la cantidad de reservas por día.
+
+---
+
+### 🧪 Escenario de Prueba (BDD - Gherkin)
+
+```gherkin
+Feature: Gestión de reservas de canchas
+
+  Scenario: Realizar una reserva en un horario disponible
+    Given una cancha con horario disponible a las 10:00
+    When un usuario realiza una reserva para esa hora
+    Then la reserva debe guardarse correctamente
+
+  Scenario: Intentar reservar un horario ya ocupado
+    Given una cancha ya reservada a las 10:00
+    When otro usuario intenta reservar el mismo horario
+    Then se debe lanzar una excepción indicando que el horario está ocupado
+---
+
+✅ Actividad 6: Comparación JUnit vs TestNG
+📊 Tabla Comparativa
+Característica	JUnit 5	TestNG
+Anotaciones	@Test, @BeforeEach	@Test, @BeforeMethod
+Parametrización	@ParameterizedTest	Muy flexible con @DataProvider
+Integración	Muy usado con Maven/Gradle	También tiene buena integración
+Reportes	Básicos (mejorables con plugins)	Mejores reportes por defecto
+Flexibilidad	Más simple, limpio y moderno	Más configurable (prioridades, grupos)
+Popularidad	Muy popular en proyectos actuales	Usado en proyectos más antiguos
+
 
 ## ⚙️ Tecnologías Usadas
 
