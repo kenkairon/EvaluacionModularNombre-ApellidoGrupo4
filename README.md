@@ -103,7 +103,6 @@ Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mant
 ![Uso de Mockito](assets/mock.png)  
 📌 **Declaración y uso en test:**
 
-![Declaración Mockito](assets/DMockito.png)
 
 ---
 
