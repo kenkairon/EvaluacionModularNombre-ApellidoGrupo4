@@ -102,13 +102,10 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 
 ## 📊 ✅ Actividad 4: Cobertura de Código (JaCoCo)
 
-> Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.
-
-```bash
-    mvn clean verify
+> Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.  mvn clean verify
 
 ---
- ✅ Actividad 5: ATDD y Criterios de Aceptación (BDD)
+## ✅ Actividad 5: ATDD y Criterios de Aceptación (BDD)
 
 📝 Historia de Usuario (modelo INVEST)
 
@@ -127,7 +124,7 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 
 🧪 Escenario de Prueba (BDD - Gherkin)
 
-```gherkin
+
 Feature: Gestión de reservas de canchas
 
   Scenario: Realizar una reserva en un horario disponible
@@ -140,3 +137,33 @@ Feature: Gestión de reservas de canchas
     When otro usuario intenta reservar el mismo horario
     Then se debe lanzar una excepción indicando que el horario está ocupado
 ---
+
+# ✅ Actividad 6: Comparación entre JUnit y TestNG
+
+Esta actividad tiene como objetivo comparar los frameworks de pruebas unitarias **JUnit 5** y **TestNG**, considerando diversos criterios como anotaciones, parametrización, reportes, flexibilidad e integración.
+
+---
+
+## 📊 Tabla Comparativa
+
+![Tabla](assets/Tabla.png)
+
+---
+
+## ✅ Elección Justificada
+
+> Para este proyecto, se eligió trabajar con **JUnit 5** debido a su enfoque moderno, claridad sintáctica y compatibilidad con herramientas actuales como **JaCoCo**, **Mockito** y **Maven**.
+
+- JUnit 5 facilita una escritura de pruebas limpia y mantenible.
+- Está completamente alineado con las buenas prácticas de desarrollo guiado por pruebas (TDD/ATDD).
+- La comunidad y documentación es extensa y está actualizada.
+
+---
+
+## 📌 Conclusión
+
+Aunque **TestNG** ofrece una mayor flexibilidad en configuraciones avanzadas (como test por prioridad o dependencias entre métodos), **JUnit 5** es ideal para proyectos modernos, orientados a prácticas limpias y herramientas de automatización continua.
+
+> ✅ Por lo tanto, **JUnit 5 es la mejor elección** para este módulo de reservas deportivas desarrollado bajo buenas prácticas de ingeniería de software.
+
+
