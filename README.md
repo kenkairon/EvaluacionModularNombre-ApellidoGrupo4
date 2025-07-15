@@ -123,7 +123,7 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 
 ---
 
-🧪 Escenario de Prueba (BDD - Gherkin)
+## 🧪 Escenario de Prueba (BDD - Gherkin)
 
 
 # Feature: Gestión de reservas de canchas
@@ -137,7 +137,7 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
     Given una cancha ya reservada a las 10:00
     When otro usuario intenta reservar el mismo horario
     Then se debe lanzar una excepción indicando que el horario está ocupado
----
+
 
 ## ✅ Actividad 6: Comparación entre JUnit y TestNG
 
