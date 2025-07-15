@@ -103,6 +103,7 @@ También se utiliza `verify(...)` para comprobar llamadas y `assertThrows(...)` 
 ## 📊 ✅ Actividad 4: Cobertura de Código (JaCoCo)
 
 > Usamos **JaCoCo** para visualizar y mejorar la cobertura de pruebas.  mvn clean verify
+![Uso de jacoco](assets/jacoco.png)
 
 ---
 ## ✅ Actividad 5: ATDD y Criterios de Aceptación (BDD)
@@ -138,7 +139,7 @@ Feature: Gestión de reservas de canchas
     Then se debe lanzar una excepción indicando que el horario está ocupado
 ---
 
-# ✅ Actividad 6: Comparación entre JUnit y TestNG
+## ✅ Actividad 6: Comparación entre JUnit y TestNG
 
 Esta actividad tiene como objetivo comparar los frameworks de pruebas unitarias **JUnit 5** y **TestNG**, considerando diversos criterios como anotaciones, parametrización, reportes, flexibilidad e integración.
 
