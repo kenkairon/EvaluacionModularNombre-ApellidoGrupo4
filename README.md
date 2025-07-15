@@ -107,28 +107,6 @@ Aplicamos los principios SOLID para mantener un diseño limpio, escalable y mant
 
 ---
 
-## 📦 Estructura del Proyecto
-
-
-src/
-├── main/
-│ └── java/com/codewave/reservas/
-│ ├── modelo/
-│ │ ├── Cancha.java
-│ │ └── Reserva.java
-│ ├── servicio/
-│ │ ├── GestorReservas.java
-│ │ └── RepositorioReserva.java
-│ └── excepciones/
-│ └── HorarioOcupadoException.java
-└── test/
-└── java/com/codewave/reservas/
-└── GestorReservasTest.java
-
-
-
----
-
 ## ⚙️ Tecnologías Usadas
 
 | Tecnología | Descripción |
