@@ -9,13 +9,27 @@ Este proyecto es un módulo funcional para gestionar **reservas de canchas** en 
 - ✅ Medición de cobertura de código con JaCoCo
 
 👨‍💻 Autor
-Carlos Vásquez
+### Equipo 4: 
+- Felipe Lobos
+- Fabiola Díaz
+- Eduardo Arellano
+- Carlos Vasquez
 Proyecto: Módulo Reservas – CodeWave
 Desarrollado para práctica de TDD y buenas prácticas de la industria.
- 
+
+## Prueba Red
+
+![Test Red](assets/red.png)
+
+
 ## 🧪 Pruebas Exitosas
 
-![Test Exitoso](assets/green.png)
+![Test Green](assets/green.png)
+![Test CodigoGreen](assets/CodigoGreen.png)
+
+## Refactor 
+
+![Test Green](assets/refactor.png)
 
 ---
 

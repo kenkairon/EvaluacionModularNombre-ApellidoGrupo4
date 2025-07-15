@@ -1,32 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Reserva.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">reservas</a> &gt; <a href="index.source.html" class="el_package">com.codewave.reservas.modelo</a> &gt; <span class="el_source">Reserva.java</span></div><h1>Reserva.java</h1><pre class="source lang-java linenums">package com.codewave.reservas.modelo;
 
 public class Reserva {
+    // Atributos
+<span class="fc" id="L5">    private static int contador = 0;</span>
+    private int id; // No, para pruebas o lógica simple; sí en sistemas reales o con BD
     private String usuario;
     private Cancha cancha;
     private String fecha;
     private String hora;
 
-<span class="fc" id="L9">    public Reserva(String usuario, Cancha cancha, String fecha, String hora) {</span>
-<span class="fc" id="L10">        this.usuario = usuario;</span>
-<span class="fc" id="L11">        this.cancha = cancha;</span>
-<span class="fc" id="L12">        this.fecha = fecha;</span>
-<span class="fc" id="L13">        this.hora = hora;</span>
-<span class="fc" id="L14">    }</span>
+    // Constructor
+<span class="fc" id="L13">    public Reserva(String usuario, Cancha cancha, String fecha, String hora) {</span>
+<span class="fc" id="L14">        this.id = ++contador; // genera un ID incremental</span>
+<span class="fc" id="L15">        this.usuario = usuario;</span>
+<span class="fc" id="L16">        this.cancha = cancha;</span>
+<span class="fc" id="L17">        this.fecha = fecha;</span>
+<span class="fc" id="L18">        this.hora = hora;</span>
+<span class="fc" id="L19">    }</span>
+
+    // Métodos Getters
+    public int getId() {
+<span class="nc" id="L23">        return id;</span>
+    }
 
     public String getUsuario() {
-<span class="nc" id="L17">        return usuario;</span>
+<span class="nc" id="L27">        return usuario;</span>
     }
 
     public Cancha getCancha() {
-<span class="fc" id="L21">        return cancha;</span>
+<span class="fc" id="L31">        return cancha;</span>
     }
 
     public String getFecha() {
-<span class="fc" id="L25">        return fecha;</span>
+<span class="fc" id="L35">        return fecha;</span>
     }
 
     public String getHora() {
-<span class="fc" id="L29">        return hora;</span>
+<span class="fc" id="L39">        return hora;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>
