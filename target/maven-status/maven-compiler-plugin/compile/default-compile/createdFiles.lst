@@ -1,5 +1,5 @@
+com\codewave\reservas\modelo\Cancha.class
 com\codewave\reservas\servicio\GestorReservas.class
 com\codewave\reservas\servicio\RepositorioReserva.class
 com\codewave\reservas\excepciones\HorarioOcupadoException.class
 com\codewave\reservas\modelo\Reserva.class
-com\codewave\reservas\modelo\Cancha.class
